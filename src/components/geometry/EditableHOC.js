@@ -1,5 +1,5 @@
-import React from 'react';
-import {extend, useThree, useRef} from 'react-three-fiber';
+import React, { useRef } from 'react';
+import { extend, useThree } from 'react-three-fiber';
 import { TransformControls } from 'three/examples/jsm/controls/TransformControls';
 
 // Не работает, сыпет ошибками
@@ -13,17 +13,14 @@ export default function EditableHOC(component) {
         } = {},
     } = useRef() || {};
 
-    // Как передать OrbitControls сюда?
-    // Как сделать свой хук вроде useOrbit()?
-    const orbit= useOrbit();
-    
     const control = new TransformControls(camera, canvas);
     control.addEventListener( 'change', render );
 
     control.addEventListener( 'dragging-changed', function ( event ) {
-        orbit.enabled = !event.value;
+        console.log('dragging-changed');
+        // orbit.enabled = !event.value;
     });
-    control.attach(component);
+    control.attach(component.current);
 
     return component;
 }
