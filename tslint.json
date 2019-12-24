@@ -1,0 +1,24 @@
+{
+  "extends": ["tslint-eslint-rules", "tslint-config-airbnb"],
+  "plugins": [
+    "react-hooks"
+  ],
+  "rules": {
+    "no-duplicate-imports": false, // conflict with typescript `* as` syntax of entire module importing
+    "no-increment-decrement": false,
+    "no-unused-variable": [true],
+    "function-name": false,
+    "max-line-length": false,
+    "import-name": false,
+    "react-hooks/rules-of-hooks": "error",
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-trailing-underscore",
+      "allow-pascal-case",
+      "allow-snake-case"
+    ]
+  }
+}
