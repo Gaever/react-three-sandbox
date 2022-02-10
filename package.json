@@ -59,7 +59,7 @@
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
     "next-with-apollo": "^4.2.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "npm": "^6.11.2",
     "passport": "^0.4.0",
